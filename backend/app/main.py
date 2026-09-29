@@ -7,7 +7,15 @@ from pathlib import Path
 from app.database import engine, Base
 from app.api import wells, stratigraphy, alerts, documents, backtest
 from app.websockets import telemetry
+from fastapi.middleware.cors import CORSMiddleware
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Or specify your frontend URL e.g. ["https://your-frontend.onrender.com"]
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 # Create DB tables if not present
 Base.metadata.create_all(bind=engine)
 
