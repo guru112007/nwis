@@ -9,6 +9,12 @@ from app.api import wells, stratigraphy, alerts, documents, backtest
 from app.websockets import telemetry
 from fastapi.middleware.cors import CORSMiddleware
 
+app = FastAPI(
+    title="eRTMAC-NWIS (Nearby Wells Intelligence System)",
+    description="Oil India Limited (SIH PS 26121) Real-Time Offset Well Look-Ahead Intelligence Engine",
+    version="1.0.0"
+)
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # Or specify your frontend URL e.g. ["https://your-frontend.onrender.com"]
@@ -19,11 +25,7 @@ app.add_middleware(
 # Create DB tables if not present
 Base.metadata.create_all(bind=engine)
 
-app = FastAPI(
-    title="eRTMAC-NWIS (Nearby Wells Intelligence System)",
-    description="Oil India Limited (SIH PS 26121) Real-Time Offset Well Look-Ahead Intelligence Engine",
-    version="1.0.0"
-)
+
 
 # Enable CORS for React frontend
 app.add_middleware(
