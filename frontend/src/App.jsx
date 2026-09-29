@@ -44,10 +44,9 @@ export default function App() {
     // Initial data fetch
     fetchWells().then(data => setWells(data)).catch(() => {});
     fetchStratigraphy().then(data => setStratigraphy(data)).catch(() => {});
-
-    // Establish WebSocket Connection for real-time telemetry stream
-    const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-    const wsUrl = `${protocol}//${window.location.host}/ws/telemetry/NH-24`;
+// Establish WebSocket Connection for real-time telemetry stream
+    const wsUrl = `wss://nwis-bcqi.onrender.com/ws/telemetry/NH-24`;
+    
 
     const ws = new WebSocket(wsUrl);
     wsRef.current = ws;
