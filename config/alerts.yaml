@@ -1,0 +1,30 @@
+# Alert Rules and Recommended Mitigation Playbooks
+tier_thresholds:
+  L1_advisory_m: 100.0   # 50 - 100m lookahead distance
+  L2_warning_m: 50.0     # 15 - 50m lookahead distance
+  L3_critical_m: 15.0    # 0 - 15m lookahead distance
+
+playbooks:
+  MUD_LOSS:
+    category: "Severe Mud Loss"
+    L1: "Pre-mix 50 bbl LCM (Loss Circulation Material) pills (Nutplug 25 ppb, Mica 15 ppb). Verify inventory on rig."
+    L2: "Reduce ROP to < 8 m/hr. Lower flow rate by 15%. Standby LCM pill injection pump."
+    L3: "CRITICAL: Stop drilling immediately. Spot 30 bbl high-viscosity LCM pill. Monitor annular fluid level."
+    
+  STUCK_PIPE:
+    category: "Differential Pipe Sticking"
+    L1: "Perform mud lubricity check (maintain friction coefficient < 0.08). Ensure drill pipe rotation > 100 RPM."
+    L2: "Increase mud weight by 0.03 SG. Recirculate hole every 30m. Minimize static string time to < 2 mins."
+    L3: "CRITICAL: Jar down with maximum allowable trip margin. Spot spot-free spotting fluid (organic acid/oil base)."
+
+  GAS_KICK:
+    category: "Gas Influx / Well Control"
+    L1: "Check gas chromatograph readings. Prepare 1.45 SG kill mud in reserve pit."
+    L2: "Line up choke manifold. Perform kick warning check: monitor pit volume (+0.5 bbl alarm threshold)."
+    L3: "CRITICAL: Shut in well immediately using Upper Annular Preventer (BOP). Conduct Driller's Method."
+
+  WELLBORE_INSTABILITY:
+    category: "Sloughing Shale / Hole Collapse"
+    L1: "Adjust mud inhibitor (KCl concentration > 7%). Perform hole cleaning wiper trip."
+    L2: "Increase mud density to 1.32 SG to counteract hoop stress. Increase flow rate to maximize hole cleaning."
+    L3: "CRITICAL: Ream tight spots carefully. Do not force drill string. Perform full hole circulation."

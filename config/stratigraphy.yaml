@@ -1,0 +1,55 @@
+# Upper Assam Shelf Stratigraphic Sequence & Engineering Risk Profile
+stratigraphy:
+  - name: "Alluvium"
+    top_md_m: 0.0
+    base_md_m: 250.0
+    lithology: "Unconsolidated Silt, Sand & Gravel"
+    typical_gr_api: 35.0
+    pore_pressure_sg: 1.00
+    risk_level: "LOW"
+    description: "Surface formation, high washouts potential."
+
+  - name: "Dhekiajuli"
+    top_md_m: 250.0
+    base_md_m: 800.0
+    lithology: "Fine to Coarse Sandstone with Claystone Bands"
+    typical_gr_api: 50.0
+    pore_pressure_sg: 1.03
+    risk_level: "LOW"
+    description: "High rate of penetration (ROP), low hazard."
+
+  - name: "Girujan Clay"
+    top_md_m: 800.0
+    base_md_m: 1650.0
+    lithology: "Mottled Claystone & Soft Shales"
+    typical_gr_api: 85.0
+    pore_pressure_sg: 1.08
+    risk_level: "MEDIUM"
+    description: "Swelling clay, prone to bit balling and tight hole."
+
+  - name: "Tipam Sandstone"
+    top_md_m: 1650.0
+    base_md_m: 2500.0
+    lithology: "Massive Porous Sandstone"
+    typical_gr_api: 40.0
+    pore_pressure_sg: 1.15
+    risk_level: "HIGH"
+    description: "Depleted reservoir zones. Severe mud loss risk."
+
+  - name: "Barail Sand/Coal"
+    top_md_m: 2500.0
+    base_md_m: 3200.0
+    lithology: "Alternating Fine Sandstone, Carbonaceous Shale & Coal Seams"
+    typical_gr_api: 95.0
+    pore_pressure_sg: 1.28
+    risk_level: "CRITICAL"
+    description: "High pressure gas kick and pipe differential sticking hazard."
+
+  - name: "Kopili Shale"
+    top_md_m: 3200.0
+    base_md_m: 3800.0
+    lithology: "Dark Splintery Fissile Shale with Thin Limestone Bands"
+    typical_gr_api: 120.0
+    pore_pressure_sg: 1.35
+    risk_level: "CRITICAL"
+    description: "Brittle sloughing shale causing hole collapse."
