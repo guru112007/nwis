@@ -1,4 +1,4 @@
-const API_BASE = '/api/v1';
+const API_BASE = 'https://nwis-bcqi.onrender.com';
 
 export async function fetchWells() {
   const res = await fetch(`${API_BASE}/wells`);
